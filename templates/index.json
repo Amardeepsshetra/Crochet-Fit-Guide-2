@@ -1,40 +1,10 @@
 {
   "sections": {
-    "nav": {
-      "type": "crochet-nav",
-      "settings": {
-        "brand_name": "Crochet Fit Guide",
-        "cta_text": "Get Started",
-        "cta_link": "/products/crochet-fit-guide"
-      }
-    },
     "hero": {
-      "type": "crochet-hero",
-      "settings": {
-        "eyebrow": "Crochet Better",
-        "title": "The Ultimate Crochet Fit Guide",
-        "subtitle": "Learn sizing, fitting, shaping, and measurements without confusion."
-      }
-    },
-    "problem": {
-      "type": "crochet-problem"
-    },
-    "opportunity": {
-      "type": "crochet-opportunity"
-    },
-    "value": {
-      "type": "crochet-value"
-    },
-    "who": {
-      "type": "crochet-who"
+      "type": "crochet-hero"
     }
   },
   "order": [
-    "nav",
-    "hero",
-    "problem",
-    "opportunity",
-    "value",
-    "who"
+    "hero"
   ]
 }
