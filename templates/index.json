@@ -8,6 +8,32 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "nav": {
+      "type": "crochet-nav"
+    },
+    "hero": {
+      "type": "crochet-hero"
+    },
+    "problem": {
+      "type": "crochet-problem"
+    },
+    "opportunity": {
+      "type": "crochet-opportunity"
+    },
+    "value": {
+      "type": "crochet-value"
+    },
+    "who": {
+      "type": "crochet-who"
+    }
+  },
+  "order": [
+    "nav",
+    "hero",
+    "problem",
+    "opportunity",
+    "value",
+    "who"
+  ]
 }
