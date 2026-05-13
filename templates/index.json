@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "hero": {
+      "type": "crochet-hero"
+    }
+  },
+  "order": ["hero"]
+}
