@@ -1,0 +1,52 @@
+<section class="cf-problem" id="problem">
+  <div class="cf-section__label reveal">{{ section.settings.label }}</div>
+  <h2 class="cf-section__title reveal stagger-1">{{ section.settings.title }}</h2>
+  <div class="cf-problem__grid">
+    <div class="cf-problem__body reveal stagger-2">
+      {{ section.settings.body_content }}
+    </div>
+    <div class="reveal stagger-3">
+      <div class="cf-problem__pullquote">{{ section.settings.pullquote }}</div>
+      <div class="cf-problem__quotes">
+        {% for block in section.blocks %}
+          <div class="cf-problem__quote-item" {{ block.shopify_attributes }}>
+            <span class="cf-problem__quote-dash">—</span>
+            {{ block.settings.quote }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Crochet Problem",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Section Label", "default": "The Core Problem" },
+    { "type": "textarea", "id": "title", "label": "Section Title", "default": "Why Following the Pattern Perfectly Is Exactly What Breaks the Fit" },
+    { "type": "richtext", "id": "body_content", "label": "Body Content" },
+    { "type": "textarea", "id": "pullquote", "label": "Pull Quote", "default": "\"I picked the size closest to my bust, but now everything else looks wrong.\"" }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Customer Quote",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "Quote Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crochet Problem",
+      "blocks": [
+        { "type": "quote", "settings": { "quote": "I do not want to mess up the whole pattern just because my waist is different." } },
+        { "type": "quote", "settings": { "quote": "Every time I try to size up, the sweater looks boxy." } },
+        { "type": "quote", "settings": { "quote": "I followed the pattern exactly, and it still does not fit right." } },
+        { "type": "quote", "settings": { "quote": "I just want to make it fit my body without starting over." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
