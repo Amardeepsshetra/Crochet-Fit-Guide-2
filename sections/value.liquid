@@ -1,0 +1,45 @@
+<section class="cf-value" id="value">
+  <div class="cf-section__label reveal">{{ section.settings.label }}</div>
+  <h2 class="cf-section__title cf-section__title--light reveal stagger-1">{{ section.settings.title }}</h2>
+  <div class="cf-value__grid">
+    {% for block in section.blocks %}
+      <div class="cf-value__item reveal stagger-{{ forloop.index }}" {{ block.shopify_attributes }}>
+        <div class="cf-value__icon">{{ block.settings.icon }}</div>
+        <div class="cf-value__title">{{ block.settings.title }}</div>
+        <div class="cf-value__body">{{ block.settings.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Crochet Value",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Section Label", "default": "What You Get" },
+    { "type": "textarea", "id": "title", "label": "Title", "default": "Stop Guessing. Start Making Clothes That Actually Fit." }
+  ],
+  "blocks": [
+    {
+      "type": "value_item",
+      "name": "Value Item",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Emoji Icon", "default": "🎯" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "description", "label": "Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crochet Value",
+      "blocks": [
+        { "type": "value_item", "settings": { "icon": "🎯", "title": "Pick the Right Size From the Start", "description": "Most makers choose a size and hope for the best. With the F.I.T. Method, you audit the pattern against your real measurements before you crochet a single stitch of the body." } },
+        { "type": "value_item", "settings": { "icon": "📐", "title": "Fit Bust, Waist & Hips — Separately", "description": "Your body is not one size. The Sectional Resizing Toolkit lets you adjust each section independently, so the whole garment fits the way it should." } },
+        { "type": "value_item", "settings": { "icon": "✂️", "title": "Change Stitches Without Breaking the Design", "description": "The Pattern Integrity Shield shows you how to work in multiples of your stitch repeat, so cables stay centered and lace stays seamless no matter what you change." } },
+        { "type": "value_item", "settings": { "icon": "👗", "title": "Finish Projects You Will Actually Wear", "description": "No more unraveling. No more abandoned sweaters stuffed in a drawer. Follow the system once, and you walk away with a garment that fits your body and looks exactly like the picture." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
